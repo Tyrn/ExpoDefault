@@ -17,12 +17,12 @@ const app = () => {
           Kitty Coffee Shop
         </Text>
         <Link
-          href="/explore"
+          href="/contact"
           style={{ marginHorizontal: 'auto' }} asChild
         >
           <Pressable style={styles.button}>
             <Text style={styles.buttonText}>
-              Explore
+              Contact Us
             </Text>
           </Pressable>
         </Link>
