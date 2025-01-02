@@ -1,6 +1,7 @@
 import {
-  View, Text, StyleSheet, ImageBackground
+  View, Text, StyleSheet, ImageBackground, Pressable
 } from 'react-native'
+import { Link } from 'expo-router'
 
 import icedCoffeeImg from '@/assets/images/chattanooga-1-red.png'
 
@@ -12,9 +13,19 @@ const app = () => {
         resizeMode='cover'
         style={styles.image}
       >
-        <Text style={styles.text}>
+        <Text style={styles.title}>
           Kitty Coffee Shop
         </Text>
+        <Link
+          href="/explore"
+          style={{ marginHorizontal: 'auto' }} asChild
+        >
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>
+              Explore
+            </Text>
+          </Pressable>
+        </Link>
       </ImageBackground>
     </View>
   )
@@ -33,11 +44,36 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     justifyContent: 'center',
   },
-  text: {
+  title: {
     color: 'white',
     fontSize: 42,
     fontWeight: 'bold',
     textAlign: 'center',
     backgroundColor: 'rgba(0,0,0,0.5)',
+    marginBottom: 120,
+  },
+  link: {
+    color: 'white',
+    fontSize: 42,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    textDecorationLine: 'underline',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    padding: 4,
+  },
+  button: {
+    height: 60,
+    borderRadius: 20,
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0,0,0,0.75)',
+    padding: 6,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    textDecorationLine: 'underline',
+    padding: 4,
   }
 })
