@@ -2,7 +2,6 @@ import {
   View, Text, StyleSheet, ImageBackground
 } from 'react-native'
 
-//import icedCoffeeImg from '@/assets/images/iced-coffee.png'
 import icedCoffeeImg from '@/assets/images/chattanooga-1-red.png'
 
 const app = () => {
